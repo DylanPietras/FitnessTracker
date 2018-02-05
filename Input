@@ -1,0 +1,19 @@
+
+print("\n\tBODY MASS INDEX CALCULATOR\n\nThis program will calculate your Body Mass Index.\n\nYou will be asked to input your height in inches and your weight in pounds.\n ")
+# Ask user to input height and weight.
+# would like to add a feet to inches converter here to make things easier on the user.
+weight_pounds = int(input("How much do you weigh in pounds? "))
+inches_height = int(input("How tall are you in inches? "))
+
+#This is for formatting. There is certaintly a cleaner way to do this.
+print("\n")
+
+# Convert inches and pounds into their metric units of meters and kilograms
+weight_kg = weight_pounds*.453592
+height_meters = inches_height*.0254
+
+# Use the calculation kg/meters/meters to find the BMI
+bmi = weight_kg / height_meters / height_meters
+
+print("Your Body Mass Index is:", end = ' ')
+print("%.1f\n" % bmi)
